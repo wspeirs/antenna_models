@@ -2,9 +2,10 @@ CE
 SY freq=14.175	'frequency
 SY lambda=299.792458/freq	'wavelength
 SY height=lambda	'height
-GW	1	25	0	-1*(0.2*lambda)	height	1.05*lambda	-1*(0.2*lambda)	height	5.118e-4	'reflector
-GW	2	25	0	0	height	lambda	0	height	5.118e-4
-GW	3	25	0	0.2*lambda	height	0.95*lambda	0.2*lambda	height	5.118e-4
+SY wl_frac=0.75	'wavelength fraction
+GW	1	25	0	-0.2*lambda	height	1.05*(wl_frac*lambda)	-0.2*lambda	height	5.118e-4	'reflector
+GW	2	25	0	0	height	(wl_frac*lambda)	0	height	5.118e-4
+GW	3	25	0	0.2*lambda	height	0.95*(wl_frac*lambda)	0.2*lambda	height	5.118e-4
 GE	0
 LD	5	0	0	0	5.8e7	0
 EX	6	2	13	0	1	0
