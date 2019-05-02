@@ -1,11 +1,12 @@
 CE
-GW	1	25	-10	0	10	10	0	10	5.11844e-4
-GW	3	25	-5	10	10	5	10	10	5.1184e-4
-GW	4	25	-15	-10	10	15	-10	10	5.1184e-4
+SY freq=14.175	'frequency
+SY lambda=299.792458/freq	'wavelength
+SY height=lambda	'height
+GW	1	25	0	-1*(0.2*lambda)	height	1.05*lambda	-1*(0.2*lambda)	height	5.118e-4	'reflector
+GW	2	25	0	0	height	lambda	0	height	5.118e-4
+GW	3	25	0	0.2*lambda	height	0.95*lambda	0.2*lambda	height	5.118e-4
 GE	0
-LD	5	4	0	0	5.8e7	0
-LD	5	1	0	0	5.8e7	0
-LD	5	3	0	0	5.8e7	0
-EX	6	1	13	0	1	0
+LD	5	0	0	0	5.8e7	0
+EX	6	2	13	0	1	0
 GN	2	0	0	0	13	0.005
 FR	0	1	0	0	14.15	0
