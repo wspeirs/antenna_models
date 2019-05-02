@@ -2,8 +2,8 @@ CE
 SY lambda=299.792458/14.175	'wavelength
 SY off_ground=21.149379753	'off_ground
 SY wl_frac=0.48	'wavelength fraction
-SY r2d_dist=-0.2	'reflector to driven distance
-SY d2p_dist=0.2	'driven to parasitic distance
+SY r2d_dist=-0.24141	'reflector to driven distance
+SY d2p_dist=0.239458	'driven to parasitic distance
 GW	1	25	0	r2d_dist*lambda	off_ground	1.05*(wl_frac*lambda)	r2d_dist*lambda	off_ground	5.118e-4	'reflector
 GW	2	25	0	0	off_ground	(wl_frac*lambda)	0	off_ground	5.118e-4
 GW	3	25	0	d2p_dist*lambda	off_ground	0.95*(wl_frac*lambda)	d2p_dist*lambda	off_ground	5.118e-4
