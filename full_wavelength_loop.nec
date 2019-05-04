@@ -2,14 +2,14 @@ CE
 SY freq=7.15	'frequency
 SY lambda=299.792458/freq	'wavelength
 SY height=41.92	'antenna height
-SY top_bot_length=15.72	'top and bottom length
-SY side_length=5.16	'sides length
+SY top_bot_length=16.736	'top and bottom length (old 15.72)
+SY side_length=5.2062	'sides length (old 5.16)
 GW	1	25	0	0	height+(side_length/2)	top_bot_length	0	height+(side_length/2)	5.e-3	'top wire
 GW	2	25	0	0	height-(side_length/2)	top_bot_length	0	height-(side_length/2)	5.e-3	'bottom wire
-GW	1	25	0	0	height-(side_length/2)	0	0	height+(side_length/2)	5.e-3	'left side wire
-GW	1	25	top_bot_length	0	height-(side_length/2)	top_bot_length	0	height+(side_length/2)	5.e-3	'right wire
+GW	3	25	0	0	height-(side_length/2)	0	0	height+(side_length/2)	5.e-3	'left side wire
+GW	4	25	top_bot_length	0	height-(side_length/2)	top_bot_length	0	height+(side_length/2)	5.e-3	'right wire
 GE	0
 LD	5	0	0	0	5.8e7	0
-EX	0	2	13	00	1	0
+EX	0	4	13	00	1	0
 GN	-1
 FR	0	1	0	0	7.15	0
