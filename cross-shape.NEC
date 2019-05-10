@@ -1,0 +1,22 @@
+CE
+SY lambda=299.792458/14.175	'wavelength
+SY height=40	'height
+SY side_height=5
+SY top_width=5
+GW	1	11	0	0	side_height+height	0	0	top_width+side_height+height	5.118e-4	'side source
+GW	4	11	(side_height*2)+top_width	0	side_height+height	(side_height*2)+top_width	0	top_width+side_height+height	5.118e-4	'right side
+GW	4	11	side_height	0	height	side_height+top_width	0	height	5.118e-4	'bottom
+GW	4	11	side_height	0	top_width+(2*side_height)+height	side_height+top_width	0	top_width+(2*side_height)+height	5.118e-4	'top
+GW	2	11	0	0	side_height+height	side_height	0	side_height+height	5.118e-4
+GW	2	11	side_height+top_width	0	side_height+height	(2*side_height)+top_width	0	side_height+height	5.118e-4
+GW	2	11	0	0	top_width+side_height+height	side_height	0	top_width+side_height+height	5.118e-4
+GW	2	11	side_height+top_width	0	top_width+side_height+height	(2*side_height)+top_width	0	top_width+side_height+height	5.118e-4
+GW	3	11	side_height	0	height	side_height	0	side_height+height	5.118e-4
+GW	3	11	top_width+side_height	0	height	top_width+side_height	0	side_height+height	5.118e-4
+GW	3	11	side_height	0	top_width+side_height+height	side_height	0	top_width+side_height+side_height+height	5.118e-4
+GW	3	11	top_width+side_height	0	top_width+side_height+height	top_width+side_height	0	top_width+side_height+side_height+height	5.118e-4
+GE	0
+LD	5	0	0	0	5.8e7	0
+EX	6	1	5	0	1	0
+GN	2	0	0	0	13	0.005
+FR	0	1	0	0	14.175	0
