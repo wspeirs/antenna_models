@@ -1,0 +1,33 @@
+CE
+SY freq=7.15	'frequency
+SY lambda=299.792458/freq	'wavelength
+SY height=41.92	'antenna height
+SY top_bot_length=16.256	'top and bottom length (old 15.72)
+SY side_length=5.74	'sides length (old 5.16)
+SY tb_ref_mul=0.04	'top-bottom reflector multiple
+SY ss_ref_mul=0.5	'side-to-side reflector multiple
+SY reflect_distance=1	'distance between reflector and loop
+SY tb_dir_mul=-0.016	'top-bottom director multiple
+SY ss_dir_mul=-0.016	'side-to-side director multiple
+SY direct_distance=-5.0	'distance between director and loop
+GW	1	25	0	0	height+(side_length/2)	top_bot_length	0	height+(side_length/2)	5.e-3	'top wire
+GW	2	25	0	0	height-(side_length/2)	top_bot_length	0	height-(side_length/2)	5.e-3	'bottom wire
+GW	3	5	0	0	height-(side_length/2)	0	0	height+(side_length/2)	5.e-3	'left side wire
+GW	4	5	top_bot_length	0	height-(side_length/2)	top_bot_length	0	height+(side_length/2)	5.e-3	'right wire
+'GW	5	25	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	5.e-3	'top wire
+'GW	5	25	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	5.e-3	'bottom wire
+'GW	5	5	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	5.e-3	'left side wire
+'GW	5	5	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	5.e-3	'right wire
+GW	6	25	-1*(top_bot_length*ss_dir_mul)	direct_distance	height+(side_length/2)+(side_length*tb_dir_mul)	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance	height+(side_length/2)+(side_length*tb_dir_mul)	5.e-3	'top wire
+GW	6	25	-1*(top_bot_length*ss_dir_mul)	direct_distance	height-((side_length/2)+(side_length*tb_dir_mul))	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance	height-((side_length/2)+(side_length*tb_dir_mul))	5.e-3	'bottom wire
+GW	6	5	-1*(top_bot_length*ss_dir_mul)	direct_distance	height-((side_length/2)+(side_length*tb_dir_mul))	-1*(top_bot_length*ss_dir_mul)	direct_distance	height+(side_length/2)+(side_length*tb_dir_mul)	5.e-3	'left side wire
+GW	6	5	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance	height-((side_length/2)+(side_length*tb_dir_mul))	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance	height+(side_length/2)+(side_length*tb_dir_mul)	5.e-3	'right wire
+GW	7	25	-1*(top_bot_length*ss_dir_mul)	direct_distance*2	height+(side_length/2)+(side_length*tb_dir_mul)	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance*2	height+(side_length/2)+(side_length*tb_dir_mul)	5.e-3	'top wire
+GW	7	25	-1*(top_bot_length*ss_dir_mul)	direct_distance*2	height-((side_length/2)+(side_length*tb_dir_mul))	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance*2	height-((side_length/2)+(side_length*tb_dir_mul))	5.e-3	'bottom wire
+GW	7	5	-1*(top_bot_length*ss_dir_mul)	direct_distance*2	height-((side_length/2)+(side_length*tb_dir_mul))	-1*(top_bot_length*ss_dir_mul)	direct_distance*2	height+(side_length/2)+(side_length*tb_dir_mul)	5.e-3	'left side wire
+GW	7	5	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance*2	height-((side_length/2)+(side_length*tb_dir_mul))	top_bot_length+(top_bot_length*ss_dir_mul)	direct_distance*2	height+(side_length/2)+(side_length*tb_dir_mul)	5.e-3	'right wire
+GE	0
+LD	5	0	0	0	5.8e7	0
+EX	0	4	3	00	1	0
+GN	-1
+FR	0	1	0	0	7.15	0
