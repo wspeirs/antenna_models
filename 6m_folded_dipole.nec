@@ -1,0 +1,23 @@
+CM GW	5	25	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	5.e-3	
+CM GW	5	25	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	5.e-3	
+CM GW	5	5	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	-1*(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	5.e-3	
+CM GW	5	5	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height-((side_length/2)+(side_length*tb_ref_mul))	top_bot_length+(top_bot_length*ss_ref_mul)	reflect_distance	height+(side_length/2)+(side_length*tb_ref_mul)	5.e-3	
+CE
+SY freq=52.0	'frequency
+SY lambda=299.792458/freq	'wavelength
+SY height=24.0	'antenna height
+SY top_length=3.5	'length of half of top
+SY side_length=0.2	'sides length
+SY top_space=0.1	'space between wires on top
+GW	1	25	0	0	height	(top_length*2)+top_space	0	height	5.e-3	'bottom wire
+GW	2	3	0	0	height	0	0	height+side_length	5.e-3	'left side wire
+GW	3	3	(top_length*2)+top_space	0	height	(top_length*2)+top_space	0	height+side_length	5.e-3	'right side wire
+GW	4	12	0	0	height+side_length	top_length	0	height+side_length	5.e-3	'left top wire
+GW	5	12	top_length+top_space	0	height+side_length	(top_length*2)+top_space	0	height+side_length	5.e-3	'right top wire
+GE	1
+LD	5	0	0	0	58000000
+GN	0	0	0	0	4	0.003
+EK
+EX	0	1	13	0	1	0	0
+FR	0	0	0	0	52.0	0
+EN
